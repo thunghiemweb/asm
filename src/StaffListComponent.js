@@ -48,8 +48,8 @@ class StaffList extends Component {
 
         const menu = this.props.dsnv.map((e) => {
             return (
-                <div className="col-sx-12 col-sm-6 col-md-4">
-                    <Card key={e.id} onClick={() => this.renderChonNV(e)}>
+                <div key={e.id} className="col-sx-12 col-sm-6 col-md-4">
+                    <Card onClick={() => this.renderChonNV(e)}>
                         <CardTitle>{e.name}</CardTitle>
                     </Card>
                 </div>
