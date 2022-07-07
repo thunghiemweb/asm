@@ -3,6 +3,7 @@ import {
     Card, CardBody, CardText,
     CardTitle
 } from 'reactstrap';
+import './App.css';
 
 
 import dateFormat from "dateformat";
@@ -25,8 +26,8 @@ class StaffList extends Component {
     renderNV(nv) {
         if (nv != null)
             return (
-                <Card>
-                    <CardBody>
+                <Card className="footer">
+                    <CardBody >
                         <CardTitle>{nv.name}</CardTitle>
                         <CardText>Ngày sinh: {dateFormat(nv.doB, "dd/mm/yyyy")}</CardText>
                         <CardText>Ngày vào công ty: {dateFormat(nv.startDate, "dd/mm/yyyy")}</CardText>
@@ -49,7 +50,7 @@ class StaffList extends Component {
         const menu = this.props.dsnv.map((e) => {
             return (
                 <div key={e.id} className="col-sx-12 col-sm-6 col-md-4">
-                    <Card onClick={() => this.renderChonNV(e)}>
+                    <Card className="footer2" onClick={() => this.renderChonNV(e)}>
                         <CardTitle>{e.name}</CardTitle>
                     </Card>
                 </div>
@@ -62,8 +63,8 @@ class StaffList extends Component {
                     {menu}
                 </div>
 
-                <div className="row">
-                    <div className="col-sx-12 col-sm-12 col-md-12">
+                <div className="row-content">
+                    <div className=" col-sx-12 col-sm-12 col-md-12">
                         {this.renderNV(this.state.selectedNV)}
                     </div>
                 </div>

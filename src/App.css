@@ -15,10 +15,24 @@
     margin:0px auto;
     padding: 20px 0px 20px 0px;
 }
+
+.footer2{
+    background-color: #e5e9c4;
+    margin:0px auto;
+    padding: 5px 5px 5px 5px;
+}
+
 .jumbotron {
     padding:70px 30px 70px 30px;
     margin:0px auto;
     background: #9575CD ;
+    color:floralwhite;
+}
+
+.jumbotron2 {
+    
+    padding:10px 10px 10px 10px;
+    margin:0px auto;
     color:floralwhite;
 }
 

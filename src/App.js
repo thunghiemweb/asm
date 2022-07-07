@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div>
         <Navbar dark color="primary">
-          <div className='container'>
+          <div className='jumbotron2'>
             <NavbarBrand>
               Ứng dụng quản lý nhân sự v1.0
             </NavbarBrand>
