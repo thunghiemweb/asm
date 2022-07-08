@@ -10,7 +10,6 @@ class App extends Component {
     this.state = { dsnv: STAFFS };
   }
 
-
   render() {
     return (
       <div>

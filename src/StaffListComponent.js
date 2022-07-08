@@ -27,7 +27,7 @@ class StaffList extends Component {
 
     renderChonNV(nv) {
         this.setState({ selectedNV: nv });
-        console.log('Chọn nhân viên');
+        //console.log('Chọn nhân viên');
     }
 
     thayDoiSoCot() {
@@ -46,7 +46,7 @@ class StaffList extends Component {
 
         console.log(this.state.cot);
 
-        console.log('Thay đổi số cột hiển thị');
+        //console.log('Thay đổi số cột hiển thị');
     }
 
     renderNV(nv) {
@@ -107,7 +107,6 @@ class StaffList extends Component {
                         {this.renderNV(this.state.selectedNV)}
                     </div>
                 </div>
-
             </div>
         );
     }
