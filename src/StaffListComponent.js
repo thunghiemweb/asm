@@ -31,6 +31,9 @@ class StaffList extends Component {
 
 
     thayDoiSoCot() {
+        this.setState({
+            Cot: ["col-12", "col-6", "col-4"]
+        })
         console.log('Thay đổi số cột hiển thị');
     }
 
@@ -88,7 +91,7 @@ class StaffList extends Component {
                 </div>
 
                 <div className="row-content">
-                    <div className="col-sx-12 col-sm-12 col-md-12">
+                    <div className="col-12">
                         {this.renderNV(this.state.selectedNV)}
                     </div>
                 </div>
