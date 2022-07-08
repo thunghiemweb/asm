@@ -24,17 +24,14 @@ class StaffList extends Component {
         }
     }
 
-    renderChonNV(dish) {
-        this.setState({ selectedNV: dish });
+    renderChonNV(nv) {
+        this.setState({ selectedNV: nv });
         console.log('Chọn nhân viên');
     }
 
 
-
-
     thayDoiSoCot() {
-        //this.setState({ color: "blue" });
-        console.log('lksdjflks');
+        console.log('Thay đổi số cột hiển thị');
     }
 
     renderNV(nv) {
@@ -61,7 +58,7 @@ class StaffList extends Component {
 
     render() {
 
-        const menu = this.props.dsnv.map((e) => {
+        const Staff = this.props.dsnv.map((e) => {
             return (
                 <div key={e.id} className="col-sx-12 col-sm-6 col-md-4">
                     <Card className="footer2"
@@ -87,11 +84,11 @@ class StaffList extends Component {
                 </Navbar>
 
                 <div className="row">
-                    {menu}
+                    {Staff}
                 </div>
 
                 <div className="row-content">
-                    <div className=" col-sx-12 col-sm-12 col-md-12">
+                    <div className="col-sx-12 col-sm-12 col-md-12">
                         {this.renderNV(this.state.selectedNV)}
                     </div>
                 </div>
