@@ -20,7 +20,8 @@ class StaffList extends Component {
         super(props);
 
         this.state = {
-            selectedNV: null
+            selectedNV: null,
+            cot: "col-12"
         }
     }
 
@@ -29,11 +30,22 @@ class StaffList extends Component {
         console.log('Chọn nhân viên');
     }
 
-
     thayDoiSoCot() {
-        this.setState({
-            Cot: ["col-12", "col-6", "col-4"]
-        })
+        if (this.state.cot === "col-12") {
+            this.setState({ cot: "col-6" });
+        }
+        else if (this.state.cot === "col-6") {
+            this.setState({ cot: "col-4" });
+        }
+        else if (this.state.cot === "col-4") {
+            this.setState({ cot: "col-2" });
+        }
+        else if (this.state.cot === "col-2") {
+            this.setState({ cot: "col-12" });
+        }
+
+        console.log(this.state.cot);
+
         console.log('Thay đổi số cột hiển thị');
     }
 
@@ -63,7 +75,7 @@ class StaffList extends Component {
 
         const Staff = this.props.dsnv.map((e) => {
             return (
-                <div key={e.id} className="col-sx-12 col-sm-6 col-md-4">
+                <div key={e.id} className={this.state.cot}>
                     <Card className="footer2"
                         onClick={() => this.renderChonNV(e)}>
                         <CardTitle>{e.name}</CardTitle>
