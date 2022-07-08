@@ -15,13 +15,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar dark color="primary">
-          <div className='jumbotron2'>
-            <NavbarBrand>
-              Ứng dụng quản lý nhân sự v1.0
-            </NavbarBrand>
-          </div>
-        </Navbar>
 
         <StaffList dsnv={this.state.dsnv} />
 

@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import {
-    Card, CardBody, CardText,
-    CardTitle
+    Card,
+    CardBody,
+    CardText,
+    CardTitle,
+    Navbar,
+    NavbarBrand
+
 } from 'reactstrap';
 import './App.css';
 
@@ -59,6 +64,13 @@ class StaffList extends Component {
 
         return (
             <div className="container">
+                <Navbar dark color="primary">
+                    <div className='jumbotron2'>
+                        <NavbarBrand>
+                            Ứng dụng quản lý nhân sự v1.0
+                        </NavbarBrand>
+                    </div>
+                </Navbar>
                 <div className="row">
                     {menu}
                 </div>
